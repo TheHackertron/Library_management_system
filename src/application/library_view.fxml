@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.LibraryController">
+    <top>
+        <HBox spacing="15" styleClass="hbox" style="-fx-padding: 15; -fx-alignment: center-left;">
+            <TextField fx:id="titleField" promptText="Enter book title" prefWidth="150"/>
+            <TextField fx:id="authorField" promptText="Enter author name" prefWidth="150"/>
+            <TextField fx:id="isbnField" promptText="Enter ISBN" prefWidth="120"/>
+            <Button text="Add Book" onAction="#addBook" prefWidth="80"/>
+            <Button text="Delete Book" onAction="#deleteBook" prefWidth="90"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="bookTable" style="-fx-padding: 10;">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" prefWidth="180"/>
+                <TableColumn fx:id="authorColumn" text="Author" prefWidth="180"/>
+                <TableColumn fx:id="isbnColumn" text="ISBN" prefWidth="140"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
